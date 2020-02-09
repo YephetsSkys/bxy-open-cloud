@@ -1,0 +1,41 @@
+bxy:
+  local-ip: ${LOCAL_IP:${spring.cloud.client.ip-address}}   # docker部署时，需要指定， 表示的运行该服务的宿主机IP
+  nacos:
+    ip: ${NACOS_IP:192.168.56.1}
+    port: ${NACOS_PORT:8848}
+    namespace: ${NACOS_ID:8274071e-424d-4263-9afc-8b5c4d86a445}
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: bxy-zuul-server
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: ${bxy.nacos.ip}:${bxy.nacos.port}
+        file-extension: yml
+        namespace: ${bxy.nacos.namespace}
+        shared-dataids: common.yml,redis.yml,mysql.yml,rabbitmq.yml
+        refreshable-dataids: common.yml
+        enabled: true
+      discovery:
+        server-addr: ${bxy.nacos.ip}:${bxy.nacos.port}
+        namespace: ${bxy.nacos.namespace}
+        metadata:
+          management.context-path: ${server.servlet.context-path:}${spring.mvc.servlet.path:}${management.endpoints.web.base-path:}
+
+logging:
+  file:
+    path: /data/projects/logs
+    name: ${logging.file.path}/${spring.application.name}/root.log
+
+# 用于/actuator/info
+info:
+  name: 'bxy-zuul-server'
+  description: '网关服务启动模块'
+  version: '1.0-SNAPSHOT'
+  spring-boot-version: '2.2.4.RELEASE'
+  spring-cloud-version: 'Hoxton.SR1'

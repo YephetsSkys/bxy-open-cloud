@@ -1,0 +1,39 @@
+bxy:
+  nacos:
+    ip: ${NACOS_IP:192.168.56.1}
+    port: ${NACOS_PORT:8848}
+    namespace: ${NACOS_ID:8274071e-424d-4263-9afc-8b5c4d86a445}
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: bxy-demo-server
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: ${bxy.nacos.ip}:${bxy.nacos.port}
+        file-extension: yml
+        namespace: ${bxy.nacos.namespace}
+        shared-dataids: common.yml,redis.yml,mysql.yml,rabbitmq.yml
+        refreshable-dataids: common.yml
+        enabled: true
+      discovery:
+        server-addr: ${bxy.nacos.ip}:${bxy.nacos.port}
+        namespace: ${bxy.nacos.namespace}
+        metadata:
+          management.context-path: ${server.servlet.context-path:}${spring.mvc.servlet.path:}${management.endpoints.web.base-path:}
+
+logging:
+  file:
+    path: /data/projects/logs
+    name: ${logging.file.path}/${spring.application.name}/root.log
+
+info:
+  name: "bxy-demo-server"
+  description: "演示服务启动模块"
+  version: "1.0-SNAPSHOT"
+  spring-boot-version: "2.2.4.RELEASE"
+  spring-cloud-version: "Hoxton.SR1"

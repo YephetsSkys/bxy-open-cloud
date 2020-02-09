@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.bxy</groupId>
+        <artifactId>bxy-dependencies</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../bxy-dependencies</relativePath>
+    </parent>
+
+    <artifactId>bxy-platform</artifactId>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>业务系统服务父pom</description>
+
+    <modules>
+        <module>bxy-authority</module>
+        <module>bxy-msgs</module>
+        <module>bxy-file</module>
+        <module>bxy-jobs</module>
+        <module>bxy-gateway</module>
+        <module>bxy-api</module>
+        <module>bxy-demo</module>
+        <module>bxy-cms</module>
+    </modules>
+
+    <properties>
+        <!-- 核心包版本 -->
+        <commons.version>1.0-SNAPSHOT</commons.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-core</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-common</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-databases</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-j2cache-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-cache-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-injection-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-config</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-user-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-scan-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-swagger2-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-dozer-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-log-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-validator-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-jwt-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-xss-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-openfeign-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-zipkin-client-starter</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+
+            <!--            <dependency>-->
+            <!--                <groupId>com.github.bxy</groupId>-->
+            <!--                <artifactId>bxy-authority-entity</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.github.bxy</groupId>-->
+            <!--                <artifactId>bxy-file-entity</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.github.bxy</groupId>-->
+            <!--                <artifactId>bxy-msgs-entity</artifactId>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-authority-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-msgs-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-file-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-jobs-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+
+            <!-- 为了减少新手启动项目的负担， 特意注释掉。 需要生成代码，请移步到 bxy-generator 项目自行下载 -->
+            <!--            <dependency>-->
+            <!--                <groupId>com.github.bxy</groupId>-->
+            <!--                <artifactId>bxy-generator</artifactId>-->
+            <!--                <scope>test</scope>-->
+            <!--                <version>${project.version}</version>-->
+            <!--            </dependency>-->
+
+        </dependencies>
+    </dependencyManagement>
+</project>

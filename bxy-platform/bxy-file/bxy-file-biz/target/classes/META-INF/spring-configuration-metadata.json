@@ -1,0 +1,87 @@
+{
+  "groups": [
+    {
+      "name": "bxy.file",
+      "type": "com.github.bxy.file.properties.FileServerProperties",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties"
+    },
+    {
+      "name": "bxy.file.ali",
+      "type": "com.github.bxy.file.properties.FileServerProperties$Ali",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "bxy.file.ali.access-key-id",
+      "type": "java.lang.String",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties$Ali"
+    },
+    {
+      "name": "bxy.file.ali.access-key-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties$Ali"
+    },
+    {
+      "name": "bxy.file.ali.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties$Ali"
+    },
+    {
+      "name": "bxy.file.ali.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties$Ali"
+    },
+    {
+      "name": "bxy.file.ali.uri-prefix",
+      "type": "java.lang.String",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties$Ali"
+    },
+    {
+      "name": "bxy.file.down-by-biz-id",
+      "type": "java.lang.String",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "bxy.file.down-by-id",
+      "type": "java.lang.String",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "bxy.file.down-by-url",
+      "type": "java.lang.String",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "bxy.file.inner-uri-prefix",
+      "type": "java.lang.String",
+      "description": "内网通道前缀 主要用于解决某些服务器的无法访问外网ip的问题",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "bxy.file.storage-path",
+      "type": "java.lang.String",
+      "description": "文件存储路径",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties",
+      "defaultValue": "\/data\/projects\/uploadfile\/file\/"
+    },
+    {
+      "name": "bxy.file.type",
+      "type": "com.github.bxy.file.enumeration.FileStorageType",
+      "description": "为以下3个值，指定不同的自动化配置 qiniu：七牛oss aliyun：阿里云oss fastdfs：本地部署的fastDFS",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties"
+    },
+    {
+      "name": "bxy.file.uri-prefix",
+      "type": "java.lang.String",
+      "description": "文件访问前缀",
+      "sourceType": "com.github.bxy.file.properties.FileServerProperties",
+      "defaultValue": "http:\/\/127.0.0.1:10000\/"
+    }
+  ],
+  "hints": []
+}

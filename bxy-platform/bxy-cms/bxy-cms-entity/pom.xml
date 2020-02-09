@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bxy-cms</artifactId>
+        <groupId>com.github.bxy</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <name>${project.artifactId}</name>
+    <artifactId>bxy-cms-entity</artifactId>
+    <description>内容管理服务实体模块</description>
+
+    <dependencies>
+        <!-- 整个项目都会依赖 bxy-common + bxy-core -->
+        <dependency>
+            <groupId>com.github.bxy</groupId>
+            <artifactId>bxy-common</artifactId>
+        </dependency>
+
+        <!-- 实体类上的注解需要使用swagger + mybatis plus相关的依赖 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

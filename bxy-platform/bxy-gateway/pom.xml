@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bxy-platform</artifactId>
+        <groupId>com.github.bxy</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bxy-gateway</artifactId>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>网关服务</description>
+
+    <modules>
+        <!-- gateway还没调试正确，存在系列的问题-->
+        <module>bxy-gateway-server</module>
+        <module>bxy-zuul-base</module>
+        <module>bxy-zuul-server</module>
+        <module>bxy-zuul-ratelimit</module>
+        <module>bxy-zuul-authentication</module>
+    </modules>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-zuul-base</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-zuul-ratelimit</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.bxy</groupId>
+                <artifactId>bxy-zuul-authentication</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
