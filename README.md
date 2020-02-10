@@ -16,7 +16,8 @@ bxy-open-cloud是国内基于Spring Cloud(Hoxton.SR1)+ SpringBoot(2.2.2.RELEASE)
 ## 开放式-微服务平台 1.0.0 
 #### 开源不易，请随手给个Star! 感谢支持！
 #### 上手难度：★★★★
-
+<img src="https://github.com/bxy2020/bxy-open-cloud/blob/master/docs/images/wx.jpg">
+<img src="https://github.com/bxy2020/bxy-open-cloud/blob/master/docs/images/zfb.jpg">
 #### 简介
 搭建基于OAuth2的开放平台、为APP端、应用服务提供统一接口管控平台、为第三方合作伙伴的业务对接提供授信可控的技术对接平台
 + 分布式架构，Nacos(服务注册+配置中心)统一管理
@@ -180,6 +181,7 @@ open-cloud
     Nginx
     ```
         
-        
-        
-        
+ #### 功能截图       
+<img src="https://github.com/bxy2020/bxy-open-cloud/blob/master/docs/images/会员中心.png">
+<img src="https://github.com/bxy2020/bxy-open-cloud/blob/master/docs/images/菜单管理.png">
+<img src="https://github.com/bxy2020/bxy-open-cloud/blob/master/docs/images/角色管理png.png">
